@@ -161,7 +161,7 @@ data structure for different scenarios.
 
 ## Challenge: [Exception Handling](./challenge/src/main/java/com/example/exceptionhandling/Main.java):
 
-### Goal:
+### [Goal](challenge/src/main/java/com/example/exceptionhandling/Calculator.java):
 Create a set of custom exceptions (e.g., `InvalidInputException`, `OperationFailedException`)
 and implement them in a calculator application. 
 
