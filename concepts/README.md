@@ -162,7 +162,28 @@ data structure for different scenarios.
 ## Challenge: [Exception Handling](./challenge/src/main/java/com/example/exceptionhandling/Main.java):
 
 ### Goal:
-createsomethingcool
+Create a set of custom exceptions (e.g., `InvalidInputException`, `OperationFailedException`)
+and implement them in a calculator application. 
+
+### Goal:
+Develop a file reader application that reads data from a file and processes it. 
+Implement the try-with-resources statement to ensure that file streams are closed
+automatically, highlighting proper resource management
+
+---
+
+## Challenge: [Collections Framework](./challenge/src/main/java/com/example/collections/Main.java):
+
+### Goal:
+Design a system to manage student records using HashMap to store student IDs 
+and their corresponding details. 
+Implement functionalities to add, update, delete, and retrieve records.
+
+### Goal:
+Develop a file reader application that reads data from a file and processes it. 
+Implement the try-with-resources statement to ensure that file streams are closed
+automatically.
+
 
 ---
 
