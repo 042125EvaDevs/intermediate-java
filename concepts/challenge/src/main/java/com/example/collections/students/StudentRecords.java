@@ -24,7 +24,8 @@ public class StudentRecords {
 
   private boolean isValidStudent(Student student) {
     boolean doesNotContainId = !students.containsKey(student.getId());
-    return doesNotContainId;
+    boolean anotherCheck = true;
+    return doesNotContainId && anotherCheck;
   }
 
   private long generateId() {
