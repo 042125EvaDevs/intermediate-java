@@ -1,1 +1,214 @@
-lorem ipsum....
+Skip to main content
+Stack Overflow
+About
+Products
+OverflowAI
+Search…
+Home
+Questions
+Tags
+Discussions
+Labs
+Chat
+Users
+Jobs
+Companies
+Collectives
+Communities for your favorite technologies. Explore all Collectives
+
+Teams
+
+Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+
+
+
+
+
+How do I load a file from resource folder? -> ["how", "do", "i" "load", "a" "file", "from", "resource", "folder"]
+Asked 12 years, 1 month ago
+Modified 28 days ago
+Viewed 834k times
+410
+
+My project has the following structure:
+
+/src/main/java/
+/src/main/resources/
+/src/test/java/
+/src/test/resources/
+I have a file in /src/test/resources/test.csv and I want to load the file from a unit test in /src/test/java/MyTest.java
+
+I have this code which didn't work. It complains "No such file or directory".
+
+BufferedReader br = new BufferedReader (new FileReader(test.csv))
+I also tried this
+
+InputStream is = (InputStream) MyTest.class.getResourcesAsStream(test.csv))
+This also doesn't work. It returns null. I am using Maven to build my project.
+
+javafilemaven
+Share
+Improve this question
+Follow
+edited Nov 8, 2017 at 13:03
+Yu Hao's user avatar
+Yu Hao
+123k4848 gold badges248248 silver badges303303 bronze badges
+asked Apr 1, 2013 at 18:23
+codereviewanskquestions's user avatar
+codereviewanskquestions
+14k3131 gold badges104104 silver badges169169 bronze badges
+2
+Doesn't work how? What is your error? –
+Daniel Kaplan
+ CommentedApr 1, 2013 at 18:24
+41
+try this this.getClass().getResource("/test.csv") –
+SRy
+ CommentedApr 1, 2013 at 18:28
+1
+stackoverflow.com/questions/3891375/… –
+dantuch
+ CommentedApr 1, 2013 at 18:28
+6
+@SRy it worked (cause this will give absolute path url in return ) however the moment i make jar file it's not working as its inside a jar and absolute path becomes invalid, is there a way to play with relative path itself –
+ShankPossible
+ CommentedMay 12, 2020 at 10:33
+@SRy, somewhere between now and 2013, this seems to have been fixed. I am today able to load root resources without the initial /. However, I do getClass().getClassLoader().getResourceAsStream(filename)... maybe that's the difference? –
+Erk
+ CommentedDec 28, 2020 at 21:37
+Add a comment
+26 Answers
+Sorted by:
+
+Highest score (default)
+370
+
+Try the next:
+
+ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+InputStream is = classloader.getResourceAsStream("test.csv");
+If the above doesn't work, various projects have been added the following class: ClassLoaderUtil1 (code here).2
+
+Here are some examples of how that class is used:
+
+src\main\java\com\company\test\YourCallingClass.java
+src\main\java\com\opensymphony\xwork2\util\ClassLoaderUtil.java
+src\main\resources\test.csv
+// java.net.URL
+URL url = ClassLoaderUtil.getResource("test.csv", YourCallingClass.class);
+Path path = Paths.get(url.toURI());
+List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
+// java.io.InputStream
+InputStream inputStream = ClassLoaderUtil.getResourceAsStream("test.csv", YourCallingClass.class);
+InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+BufferedReader reader = new BufferedReader(streamReader);
+for (String line; (line = reader.readLine()) != null;) {
+    // Process line
+}
+Notes
+
+See it in The Wayback Machine.
+Also in GitHub.
+Share
+Improve this answer
+Follow
+edited Jul 11, 2024 at 6:59
+Mark Rotteveel's user avatar
+Mark Rotteveel
+110k232232 gold badges156156 silver badges225225 bronze badges
+answered Apr 1, 2013 at 18:29
+Paul Vargas's user avatar
+Paul Vargas
+42.1k1616 gold badges107107 silver badges148148 bronze badges
+16
+thx for the answer, could you please explain why we should use this very specific loader but not that of the class ? –
+Hui Wang
+ CommentedOct 29, 2015 at 9:05
+1
+great, I'm so stupid that I was using Object.class.getClassLoader();, from a static context which didn't work - this suggestion does - well almost, it injects %20 for spaces which gives me a FileNotFoundException –
+ycomp
+ CommentedMar 7, 2016 at 20:03
+6
+@ycomp Because getResource returns a URL, not a file. The getFile method of java.net.URL does not convert a URL to a file; it just returns the path and query portions of the URL. You shouldn't even try to convert it to a File; just call openStream and read from that. –
+VGR
+ CommentedApr 7, 2016 at 13:15
+Check this project, solves resources folder scanning: github.com/fraballi/resources-folder-scanner –
+Felix Aballi
+ CommentedMar 13, 2020 at 18:36
+1
+The one liner suggested by @prayagupa only works in Java 9 or higher, see stackoverflow.com/questions/54269211/… –
+craastad
+ CommentedFeb 1, 2022 at 20:33
+Show 1 more comment
+125
+
+Try:
+
+InputStream is = MyTest.class.getResourceAsStream("/test.csv");
+IIRC getResourceAsStream() by default is relative to the class's package.
+
+As @Terran noted, don't forget to add the / at the starting of the filename
+
+Share
+Improve this answer
+Follow
+edited Apr 1, 2020 at 12:27
+theapache64's user avatar
+theapache64
+11.8k1010 gold badges7272 silver badges125125 bronze badges
+answered Apr 1, 2013 at 18:27
+vanza's user avatar
+vanza
+9,91322 gold badges3333 silver badges3434 bronze badges
+4
+For those seeking sanity, this post brings you all the way to getting the resource as a String stackoverflow.com/a/35446009/544045 –
+uadnal
+ CommentedMay 17, 2018 at 18:14
+30
+The "/" is the key. –
+Terran
+ CommentedFeb 7, 2019 at 16:06
+Add a comment
+74
+
+Try following codes on Spring project
+
+ClassPathResource resource = new ClassPathResource("fileName");
+InputStream inputStream = resource.getInputStream();
+Or on non spring project
+
+ ClassLoader classLoader = getClass().getClassLoader();
+ File file = new File(classLoader.getResource("fileName").getFile());
+ InputStream inputStream = new FileInputStream(file);
+Share
+Improve this answer
+Follow
+edited Jan 26, 2022 at 17:33
+OneCricketeer's user avatar
+OneCricketeer
+192k2020 gold badges144144 silver badges269269 bronze badges
+answered Apr 14, 2017 at 16:35
+srsajid's user avatar
+srsajid
+1,7971515 silver badges1212 bronze badges
+3
+Should the InputStream not be closed? –
+030
+ CommentedFeb 18, 2018 at 14:36
+3
+This answer works on a war file not for a jar file. –
+akinKaplanoglu
+ CommentedFeb 12, 2022 at 0:03
+Add a comment
+45
+
+Here is one quick solution with the use of Guava:
+
+import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
+
+public String readResource(final String fileName, Charset charset) throws IOException {
+        return Resources.toString(Resources.getResource(fileName), charset);
+}

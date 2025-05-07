@@ -1,8 +1,10 @@
 package com.example.collections.students;
 
+import com.example.exceptionhandling.generics.RepositoryEntity;
+
 import java.util.Objects;
 
-public class Student {
+public class Student implements RepositoryEntity<Long> {
 
   private String name;
   private long id;
