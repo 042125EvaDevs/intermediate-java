@@ -161,7 +161,7 @@ data structure for different scenarios.
 
 ## Challenge: [Exception Handling](./challenge/src/main/java/com/example/exceptionhandling/Main.java):
 
-### Goal:
+### [Goal](challenge/src/main/java/com/example/exceptionhandling/Calculator.java):
 Create a set of custom exceptions (e.g., `InvalidInputException`, `OperationFailedException`)
 and implement them in a calculator application. 
 
@@ -184,6 +184,17 @@ Develop a file reader application that reads data from a file and processes it.
 Implement the try-with-resources statement to ensure that file streams are closed
 automatically.
 
+### Goal:
+Read a paragraph from the console or file, split it into words, and count the
+frequency of each word using a HashMap and Stream operations.
+
+### Goal:
+Create a generic `Repository<T>` class that can store and retrieve objects of any type.
+Add methods like add(T item), getAll(), and find(Predicate<T>).
+
+### Goal:
+Create a Student class with name and GPA. Store a list of students, 
+then sort and display the top 3 using Collections.sort() and stream-based sorted().
 
 ---
 

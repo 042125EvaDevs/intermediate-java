@@ -16,14 +16,13 @@ public class Student implements Comparator<Student> {
     this.age = age;
   }
 
-
   public static void main(String[] args) {
     Collection<Student> students = initializeStudents();
 
     System.out.println(String.format("There are %d students: ", students.size(), students));
   }
 
-  private static Collection<Student> initializeStudents() {
+  public static Collection<Student> initializeStudents() {
     Set<Student> students = new HashSet<>();
 
     students.add(new Student("a", 12, 18));
@@ -106,4 +105,27 @@ public class Student implements Comparator<Student> {
       '}';
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getGrade() {
+    return grade;
+  }
+
+  public void setGrade(int grade) {
+    this.grade = grade;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
 }
