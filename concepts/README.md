@@ -99,8 +99,8 @@ data structure for different scenarios.
 - **List Interface**  
   An ordered collection that allows duplicate elements. Common implementations include `ArrayList`, `LinkedList`, and `Vector`.
 
-- **Set Interface**  
-  A collection that doesn't allow duplicate elements. Common implementations include `HashSet`, `LinkedHashSet`, and `TreeSet`.
+  - **Set Interface**  
+    A collection that doesn't allow duplicate elements. Common implementations include `HashSet`, `LinkedHashSet`, and `TreeSet`.
 
 - **Queue Interface**  
   A collection designed for holding elements in a FIFO (First In, First Out) order. Common implementations include `LinkedList` and `PriorityQueue`.
@@ -174,8 +174,8 @@ automatically, highlighting proper resource management
 
 ## Challenge: [Collections Framework](./challenge/src/main/java/com/example/collections/Main.java):
 
-### Goal:
-Design a system to manage student records using HashMap to store student IDs 
+### Goal 1:
+Design a system to manage student records using `HashMap` to store student IDs 
 and their corresponding details. 
 Implement functionalities to add, update, delete, and retrieve records.
 
@@ -193,8 +193,8 @@ Create a generic `Repository<T>` class that can store and retrieve objects of an
 Add methods like add(T item), getAll(), and find(Predicate<T>).
 
 ### Goal:
-Create a Student class with name and GPA. Store a list of students, 
-then sort and display the top 3 using Collections.sort() and stream-based sorted().
+Create a `Student` class with name and GPA. Store a list of students, 
+then sort and display the top 3 using `Collections.sort()` and stream-based sorted().
 
 ---
 
