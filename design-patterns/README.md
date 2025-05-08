@@ -8,71 +8,11 @@ Each concept is explained clearly and followed by targeted practice challenges a
 [//]: # 'concepts-start'
 
 
-##  [Exception Handling](notes/src/main/java/com/example/exceptionhandling/Main.java):
+##  [Singleton](notes/src/main/java/com/example/exceptionhandling/Main.java):
 
-Exception handling in Java helps manage runtime errors, ensuring the program
-can recover and continue running. 
-
-It uses keywords like `try`, `catch`, `finally`, `throw`, and `throws` 
-to handle errors gracefully. Mastering exception handling is key to 
-building robust and fault-tolerant applications.
-
-### Concepts
-
-- **What is an Exception?**  
-  An exception disrupts the normal flow of execution. Java exceptions are categorized into `Checked` (compile-time) and `Unchecked` (runtime).
-
-- **Checked vs. Unchecked Exceptions**
-  - **Checked**: Must be explicitly handled (e.g., `IOException`).
-  - **Unchecked**: Occur during runtime and don't require explicit handling (e.g., `NullPointerException`).
-
-- **try, catch, finally Blocks**
-  - `try`: Code that may throw an exception.
-  - `catch`: Catches and handles the exception.
-  - `finally`: Always executes, regardless of an exception.
-
-- **throw Keyword**  
-  Explicitly throws an exception, typically for custom errors.
-
-- **throws Keyword**  
-  Declares that a method may throw an exception, passing the responsibility to the calling method.
-
-- **Custom Exception Handling**  
-  Create custom exceptions by extending `Exception` or `RuntimeException`.
-
-- **Exception Hierarchy**  
-  `Throwable` is the root class for all errors and exceptions.
-
-- **Best Practices**
-  - Catch specific exceptions.
-  - Avoid empty `catch` blocks.
-  - Use `finally` for resource management.
+##  [Factory](notes/src/main/java/com/example/exceptionhandling/Main.java):
 
 ### Practice
-
-1. **Basic try-catch Block**  
-   Divide two numbers and handle any arithmetic exceptions (e.g., division by zero).
-
-2. **Handling Multiple Exceptions**  
-   Handle both `ArithmeticException` and `NullPointerException` using multiple `catch` blocks.
-
-3. **Using the finally Block**  
-   Open and close a file using `finally` to ensure it is always closed.
-
-4. **Throwing Custom Exceptions**  
-   Create a `InvalidAgeException` and throw it for ages under 18.
-
-5. **Method Declaration with throws**  
-   Declare a method that throws `FileNotFoundException`.
-
-6. **Nested try-catch Blocks**  
-   Handle multiple exceptions using nested `try-catch` blocks.
-
-7. **Handling Multiple Exceptions with Multi-catch**  
-   Use multi-catch to handle both `ArrayIndexOutOfBoundsException` and `NumberFormatException`.
-
-8. **Best Practices**  
-   Refactor code to follow best practices in exception handling.
 
 
 ---
