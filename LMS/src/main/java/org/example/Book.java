@@ -1,3 +1,5 @@
+package org.example;
+
 // Book class (Parent class) - Represents a generic Book in the library
 // The Book class contains common attributes and methods for all book types
 class Book {

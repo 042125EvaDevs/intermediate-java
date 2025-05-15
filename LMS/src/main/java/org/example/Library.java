@@ -1,3 +1,5 @@
+package org.example;
+
 // Library class - Main class that simulates borrowing books from the library
 class Library {
     public static void main(String[] args) {

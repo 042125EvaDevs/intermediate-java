@@ -1,3 +1,5 @@
+package org.example;
+
 // NonFictionBook class (Subclass of Book - Inheritance) - Represents a Non-Fiction book
 // NonFictionBook has an additional attribute "subject" to categorize the book type (e.g., History, Science)
 class NonFictionBook extends Book {

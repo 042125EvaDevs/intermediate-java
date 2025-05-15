@@ -1,3 +1,5 @@
+package org.example;
+
 // FictionBook class (Subclass of Book - Inheritance) - Represents a Fiction book
 // FictionBook has an additional attribute "genre" that distinguishes it from other book types
 class FictionBook extends Book {

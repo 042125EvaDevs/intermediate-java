@@ -1,3 +1,5 @@
+package org.example;
+
 // Member class - Represents a library member who can borrow books
 // A member has a name and a member ID, which are required to borrow books from the library
 class Member {

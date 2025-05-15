@@ -1,3 +1,5 @@
+package org.example;
+
 // Abstract class for borrowing behavior (Abstraction)
 // This class defines a contract for borrowing behavior for different types of books
 abstract class BorrowBehavior {
