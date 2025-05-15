@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9901ba8b-7d44-47bd-b500-704817d5442c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../concepts/challenge/src/main/java/com/example/collections/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../concepts/challenge/src/main/java/com/example/collections/StudentRecords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-buster/src/main/java/org/example/Model/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../concepts/challenge/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../concepts/challenge/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../concepts/challenge/src/main/java/com/example/exceptionhandling/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../concepts/challenge/src/main/java/com/example/exceptionhandling/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../design-patterns/notes/src/main/java/com/example/prototypepattern/PrototypePattern.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/game-buster" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2x5gtgFjZ1sqlarCrnI3na1htWZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rakno/workspace/Eva_IT_CS/eva-cohort/intermediate-java/andrew-assignments"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9901ba8b-7d44-47bd-b500-704817d5442c" name="Changes" comment="" />
+      <created>1747233565215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747233565215</updated>
+    </task>
+    <servers />
+  </component>
+</project>
