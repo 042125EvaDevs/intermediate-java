@@ -1,6 +1,6 @@
 package com.example.exceptionhandling.generics;
 
-import com.example.collections.students.Student;
+import com.example.collections.challenge1.Student;
 
 import java.util.*;
 

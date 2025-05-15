@@ -1,4 +1,4 @@
-package com.example.collections.students;
+package com.example.collections.challenge1;
 
 public class InvalidStudentException extends Exception {
   public InvalidStudentException(Student student) {

@@ -1,4 +1,4 @@
-package com.example.collections.students;
+package com.example.collections.challenge1;
 
 import java.util.HashMap;
 

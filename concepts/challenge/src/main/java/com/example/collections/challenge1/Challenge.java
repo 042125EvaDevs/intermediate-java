@@ -1,10 +1,6 @@
-package com.example.collections;
+package com.example.collections.challenge1;
 
-import com.example.collections.students.InvalidStudentException;
-import com.example.collections.students.StudentRecords;
-import com.example.collections.students.Student;
-
-public class Main {
+public class Challenge {
 
     public static void main(String[] args)  {
 
