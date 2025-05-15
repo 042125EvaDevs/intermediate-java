@@ -1,0 +1,79 @@
+body{
+    background-image: url('images/background.jpg'); 
+} 
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: orange;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover{
+    color: red;
+    background-color: transparent; 
+    text-decoration: underline;
+}
+a:active{
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.img_container{
+    float:right;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.container{
+    width: 92%;
+    margin: auto;
+    height:100%;
+    border:2px transparent red;
+
+}
+
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1140px;
+    }
+}
+
+.top-bar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.stack {
+    padding: 20px;
+}
+
+.stack h1{
+    color:white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    margin-top: 0;
+    font-size: 55px;
+    top: 30%;
+    left: 15%;
+}
+
+.stack P{
+    color: white;
+    font-famly:Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    margin-top: 0;
+    font-size: 25px;
+    top: 40%;
+    left: 21%;
+}
